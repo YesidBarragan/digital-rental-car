@@ -1,0 +1,273 @@
+/* =====================================================
+                        GENERAL
+   ===================================================== */
+
+   * {
+    /*Display & Box Model*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*Display & Box Model*/
+    height: 100vh;
+    max-width: 480px;
+
+    /*Otros*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+                        HEADER
+   ===================================================== */
+
+header {
+    /*Display & Box Model*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    padding: 0 .9em;
+
+    /*Otros*/
+    background-color: aqua;
+}
+
+header a {
+    /*Otros*/
+    text-decoration: none;
+    color: #050c0c;
+}
+
+header a:visited{
+    /*Otros*/
+    text-decoration: none;
+    color: #050c0c;
+}
+
+.fa-bars {
+    /*Otros*/
+    font-size: 1.5rem;
+}
+
+.header-input {
+    /*Display & Box Model*/
+    display: none;       
+}
+
+header .header-links .header-links__slogan {
+    display: none;
+}
+
+
+/* =====================================================
+                        MAIN
+   ===================================================== */
+
+main {
+    /*Display & Box Model*/
+    width: 100vw;
+}
+
+h1 {
+    /*Display & Box Model*/
+    padding: 4.1em 1em 0;
+
+    /*Otros*/
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+/* =====================================================
+                        FOOTER
+   ===================================================== */
+
+footer {
+    /*Display & Box Model*/
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: 58px;
+    width: 100vw;
+    padding-left: 1.4em;
+
+    /*Otros*/
+    background-color: aqua;
+}
+
+.copyright-text {
+    /*Otros*/
+    font-weight: 700;
+}
+
+.footer-icons {
+    display: none;
+}
+
+
+/* ==============================
+   ==============================
+            BREAKPOINTS
+   ============================== 
+   ============================== */
+
+/*TABLETS*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* =====================================================
+                            HEADER
+    ===================================================== */
+
+    header {
+        /*Display & Box Model*/
+        padding: 0 1.6em;
+    }
+    
+    header .header-links .header-links__slogan {
+        display: none;
+    }
+
+    .fa-bars {
+        /*Display & Box Model*/
+        display: none;
+    }
+
+    header .header-input {
+        /*Display & Box Model*/
+        display: block;      
+    }
+
+    header .header-input input {
+        /*Display & Box Model*/
+        padding: .6em 2.2em;
+        border-radius: 7px;
+
+        /*Otros*/
+        font-weight: 700;
+    }
+
+    header .header-input .header-input__signup {
+        /*Display & Box Model*/
+        margin-right: .6em;
+    }
+
+    
+    /* =====================================================
+                            FOOTER
+    ===================================================== */
+
+    footer {
+        /*Display & Box Model*/
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.6em;
+    }
+
+    .footer-icons {
+        /*Display & Box Model*/
+        display: inline-block;
+
+        /*Otros*/
+        font-size: 1.5rem;
+    }
+
+    .footer-icons .fab-icon {
+        margin-right: .8em;
+    }
+
+}
+
+
+
+/*DESKTOP*/
+
+@media (min-width: 1280px) {
+
+    /* =====================================================
+                            HEADER
+    ===================================================== */
+
+    header {
+        /*Display & Box Model*/
+        padding: 0 2.5em;
+    }
+
+    header .header-links .header-links__logo {
+        padding-right: .7em;
+    }
+
+    header .header-links .header-links__slogan {
+        display: block;
+    }
+
+    header .header-links {
+        display: flex;
+    }
+
+    .fa-bars {
+        /*Display & Box Model*/
+        display: none;
+    }
+
+    header .header-input {
+        /*Display & Box Model*/
+        display: block;      
+    }
+
+    header .header-input input {
+        /*Display & Box Model*/
+        padding: .6em 3.7em;
+        border-radius: 7px;
+
+        /*Otros*/
+        font-weight: 700;
+    }
+
+    header .header-input .header-input__signup {
+        /*Display & Box Model*/
+        margin-right: .6em;
+    }
+
+
+    /* =====================================================
+                            FOOTER
+    ===================================================== */
+
+    footer {
+        /*Display & Box Model*/
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3em;
+    }
+
+    .footer-icons {
+        /*Display & Box Model*/
+        display: inline-block;
+
+        /*Otros*/
+        font-size: 1.7rem;
+    }
+
+    .footer-icons .fab-icon {
+        margin-right: .9em;
+    }
+
+}
+
+
+/*elementos a cambiar/definir:
+tipografía
+paleta de colores
+logo
+lema de la empresa
+color de <a>
+color de <input>
+*/
