@@ -1,0 +1,105 @@
+:root {
+  --main-color: #1DBEB4;
+  --text-color: #383B58;
+  --link-color: #4285F4;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: start;
+  margin-bottom: 8px;
+}
+
+label.repassword, label.password, label.email, label.lastname{
+  margin-top: 16px;
+}
+
+input {
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  height: 40px;
+  width: 300px;
+}
+
+button.register-button {
+  font-weight: bold;
+  color: #ffffff;
+  height: 40px;
+  border-style: none;
+  border-radius: 5px;
+  background: var(--main-color);
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+p.login-anchor {
+  margin-top: 7px;
+  font-weight: 500;
+}
+
+p a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+@media only screen and (min-width: 768px) {
+  /* For Tablet: */
+  input {
+    width: 346px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  /* For Desktop: */
+  
+  div.name-lastname {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  label.name {
+    margin-top: 16px;
+  }
+
+  input {
+    width: 448px;
+  }
+
+  input.register-name, input.register-lastname {
+    width: 216px;
+  }
+
+  button.register-button {
+    width: 206px;
+  }
+
+  form button:first-of-type {
+    align-self: center;
+  }
+}
