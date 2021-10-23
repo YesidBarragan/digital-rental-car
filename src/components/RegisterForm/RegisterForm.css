@@ -4,42 +4,42 @@
   --link-color: #4285F4;
 }
 
-section {
+section.register {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-h1 {
+section.register h1 {
   color: var(--main-color);
   margin-bottom: 30px;
 }
 
-form {
+form.register-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-form div {
+form.register-form div {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-label {
+form.register-form label {
   font-weight: 500;
   color: var(--text-color);
   text-align: start;
   margin-bottom: 8px;
 }
 
-label.repassword, label.password, label.email, label.lastname{
+.register-repassword-label, .register-password-label, .register-email-label, .register-lastname-label {
   margin-top: 16px;
 }
 
-input {
+form.register-form input {
   border-style: none;
   border-radius: 5px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
@@ -58,19 +58,19 @@ button.register-button {
   cursor: pointer;
 }
 
-p.login-anchor {
+section.register p.login-anchor {
   margin-top: 7px;
   font-weight: 500;
 }
 
-p a {
+section.register p a {
   text-decoration: none;
   color: var(--link-color);
 }
 
 @media only screen and (min-width: 768px) {
   /* For Tablet: */
-  input {
+  form.register-form input {
     width: 346px;
   }
 }
@@ -78,23 +78,23 @@ p a {
 @media only screen and (min-width: 1366px) {
   /* For Desktop: */
   
-  div.name-lastname {
+  form.register-form div.name-lastname {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  label.name {
+  label.register-name-label {
     margin-top: 16px;
   }
-
-  input {
+  
+  form.register-form input {
     width: 448px;
   }
 
-  input.register-name, input.register-lastname {
+  div.name-lastname input.register-name, div.name-lastname input.register-lastname {
     width: 216px;
   }
-
+  
   button.register-button {
     width: 206px;
   }

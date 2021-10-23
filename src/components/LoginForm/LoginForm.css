@@ -4,36 +4,36 @@
   --link-color: #4285F4;
 }
 
-section {
+section.login {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-h1 {
+section.login h1 {
   color: var(--main-color);
   margin-bottom: 100px;
 }
 
-form {
+form.login-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-label{
+form.login-form label {
   font-weight: 500;
   color: var(--text-color);
   text-align: start;
   margin-bottom: 8px;
 }
 
-label.password {
+form.login-form label.login-password-label {
   margin-top: 16px;
 }
 
-input {
+form.login-form input {
   border-style: none;
   border-radius: 5px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
@@ -52,26 +52,26 @@ button.login-button {
   cursor: pointer;
 }
 
-p.register-anchor {
+section.login p.register-anchor {
   margin-top: 7px;
   font-weight: 500;
 }
 
-p a {
+section.login p a {
   text-decoration: none;
   color: var(--link-color);
 }
 
 @media only screen and (min-width: 768px) {
   /* For Tablet: */
-  input {
+  form.login-form input {
     width: 346px;
   }
 }
 
 @media only screen and (min-width: 1366px) {
   /* For Desktop: */
-  input {
+  form.login-form input {
     width: 448px;
   }
   

@@ -9,12 +9,12 @@ export const LoginForm = () => {
   }
 
   return (
-    <section>
+    <section className="login">
       <h1>Iniciar Sesión</h1>
-      <form onSubmit={submitHandler}>
-        <label className="email" htmlFor="login-email">Correo electrónico</label>
+      <form className="login-form" onSubmit={submitHandler}>
+        <label className="login-email-label" htmlFor="login-email">Correo electrónico</label>
         <input id="login-email" type="email" required />
-        <label className="password" htmlFor="login-password">Contraseña</label>
+        <label className="login-password-label" htmlFor="login-password">Contraseña</label>
         <input id="login-password" type="password" required />
         <button className="login-button" type="submit">Ingresar</button>
       </form>
