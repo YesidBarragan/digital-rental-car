@@ -1,3 +1,9 @@
+:root {
+  --main-color: #fbc02d;
+  --text-color: #263238;
+  --link-color: #4285F4;
+}
+
 section.login {
   display: flex;
   justify-content: center;
