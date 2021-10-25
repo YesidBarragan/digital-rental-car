@@ -1,9 +1,3 @@
-:root {
-  --main-color: #1DBEB4;
-  --text-color: #383B58;
-  --link-color: #4285F4;
-}
-
 section.login {
   display: flex;
   justify-content: center;
@@ -13,7 +7,7 @@ section.login {
 
 section.login h1 {
   color: var(--main-color);
-  margin-bottom: 100px;
+  margin: 20px 0 100px 0;
 }
 
 form.login-form {
@@ -48,13 +42,14 @@ button.login-button {
   border-style: none;
   border-radius: 5px;
   background: var(--main-color);
-  margin-top: 48px;
+  margin-top: 52px;
   cursor: pointer;
 }
 
 section.login p.register-anchor {
   margin-top: 7px;
   font-weight: 500;
+  color: var(--text-color);
 }
 
 section.login p a {

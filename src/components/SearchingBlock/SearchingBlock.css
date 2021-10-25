@@ -1,0 +1,32 @@
+:root {
+    --background-color: #607d8b;
+}
+
+.main-box {
+    /*Display & Box Model*/
+    margin-top: 100px;
+    height: 250px;
+
+    /*Otros*/
+    background-color: var(--background-color);
+}
+
+.main-box form {
+    /*Display & Box Model*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.1em;
+}
+
+.main-box form input {
+    /*Display & Box Model*/
+    border-radius: 6px;
+    padding: .7em 10em;
+}
+
+.main-box form .form-input__check {
+    /*Display & Box Model*/
+    margin-top: .5em;
+}

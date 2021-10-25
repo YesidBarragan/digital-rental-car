@@ -41,11 +41,10 @@ header {
     height: 100px;
     width: 100vw;
     padding: 0 .9em;
+    box-shadow: 0px 3px 5px 0px rgba(251,192,45,0.55);
 
     /*Otros*/
     color: var(--main-color);
-
-    border-bottom: 1px solid red;
 }
 
 .header-links__logo {
@@ -55,21 +54,15 @@ header {
 header a {
     /*Otros*/
     text-decoration: none;
-    color: #050c0c;
 }
 
 header a:visited{
     /*Otros*/
     text-decoration: none;
-    color: #050c0c;
+    color: var(--third-color);
 }
 
-.fa-bars {
-    /*Otros*/
-    font-size: 1.5rem;
-}
-
-.header-input {
+.header-buttons {
     /*Display & Box Model*/
     display: none;       
 }
@@ -91,9 +84,10 @@ main {
 
 h1 {
     /*Display & Box Model*/
-    padding: 4.1em 1em 0;
+    padding: 1em 1em 0;
 
     /*Otros*/
+    color: #ffffff;
     font-size: 1.8rem;
     text-align: center;
 }
@@ -147,6 +141,7 @@ footer {
     header {
         /*Display & Box Model*/
         padding: 0 1.6em;
+        box-shadow: none;
     }
 
     header .header-links .header-links__slogan {
@@ -159,13 +154,13 @@ footer {
         display: none;
     }
 
-    header .header-input {
+    header .header-buttons {
         /*Display & Box Model*/
         display: block;  
         padding-top: 1.4em;    
     }
 
-    header .header-input input {
+    header .header-buttons a {
         /*Display & Box Model*/
         padding: .8em 2.8em;
         border-radius: 7px;
@@ -178,7 +173,7 @@ footer {
         font-weight: 700;
     }
 
-    header .header-input .header-input__signup {
+    header .header-buttons .header-button__signup {
         /*Display & Box Model*/
         margin-right: 1.1em;
     }
@@ -220,6 +215,7 @@ footer {
     header {
         /*Display & Box Model*/
         padding: 0 2.8em;
+        box-shadow: none;
     }
 
     header .header-links {
@@ -248,12 +244,12 @@ footer {
         display: none;
     }
 
-    header .header-input {
+    header .header-buttons {
         /*Display & Box Model*/
         display: block;      
     }
 
-    header .header-input input {
+    header .header-buttons a {
         /*Display & Box Model*/
         padding: .8em 4.7em;
         border-radius: 6px;
@@ -266,7 +262,7 @@ footer {
         font-weight: 700;
     }
 
-    header .header-input .header-input__signup {
+    header .header-buttons .header-button__signup {
         /*Display & Box Model*/
         margin-right: .6em;
     }
@@ -297,8 +293,5 @@ footer {
 
 
 /*elementos a cambiar/definir:
-tipografía
 lema de la empresa
-color de <a>
-color de <input>
 */

@@ -18,7 +18,7 @@ export const LoginForm = () => {
         <input id="login-password" type="password" required />
         <button className="login-button" type="submit">Ingresar</button>
       </form>
-      <p className="register-anchor">¿Aún no tenes cuenta? <Link to="/register">Registrate</Link></p>
+      <p className="register-anchor">¿Aún no tienes cuenta? <Link to="/register">Regístrate</Link></p>
     </section>
   )
 }

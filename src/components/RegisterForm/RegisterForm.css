@@ -1,7 +1,7 @@
 :root {
-  --main-color: #1DBEB4;
-  --text-color: #383B58;
-  --link-color: #4285F4;
+  --main-color: #fbc02d;
+  --text-color: #263238;
+  --link-color: #607d8b; /* #4285F4 */
 }
 
 section.register {
@@ -13,7 +13,7 @@ section.register {
 
 section.register h1 {
   color: var(--main-color);
-  margin-bottom: 30px;
+  margin: 10px 0 30px 0;
 }
 
 form.register-form {
@@ -61,6 +61,7 @@ button.register-button {
 section.register p.login-anchor {
   margin-top: 7px;
   font-weight: 500;
+  color: var(--text-color);
 }
 
 section.register p a {
