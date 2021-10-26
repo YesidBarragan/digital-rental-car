@@ -7,8 +7,10 @@ export const Home = () => {
   return (
     <>
       <Header/>
+      <main>
+        <SearchingBlock/>
+      </main>
       <Footer/>
-      <SearchingBlock/>
     </>
   )
 }

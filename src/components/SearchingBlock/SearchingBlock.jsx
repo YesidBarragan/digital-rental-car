@@ -11,8 +11,8 @@ class SearchingBlock extends React.Component {
             <div className="main-box">
                 <h1>Busca ofertas en todo tipo de carros</h1>
                 <form>
-                    <input value="¿A dónde vamos?"/>
-                    <input className="form-input__check" value="Check in - Check out"/>
+                    <input className="form-input__map" type="text" placeholder="¿A dónde vamos?"/>
+                    <input className="form-input__check" type="text" placeholder="Check in - Check out"/>
                     <button>Buscar</button>
                 </form>
             </div>

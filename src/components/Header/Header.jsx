@@ -6,6 +6,11 @@ import "../../general.css";
 
 export const Header = () => {
 
+    /* window.addEventListener('scroll', function() {
+        let header = document.querySelector('header');
+        header.classList.toggle('header-down', window.scrollY > 0);
+    }) */
+
     return (
         <header>
             <div className="header-links">
@@ -17,10 +22,16 @@ export const Header = () => {
                 </div>
             </div>
             <img className="menu-icon" src={iconMenu} alt="Ícono menú"/>
-            <div className="header-buttons">
-                <Link to="/register" className="header-button__signup">Crear cuenta</Link>
-                <Link to="/login">Iniciar sesión</Link>
-            </div>
+            <nav>
+                <ul className="header-buttons">
+                    <li>
+                       <Link to="/register" className="header-button__signup">Crear cuenta</Link> 
+                    </li>
+                    <li>
+                       <Link to="/login" className="header-button__login">Iniciar sesión</Link> 
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 

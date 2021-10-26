@@ -20,7 +20,7 @@
 body {
     /*Display & Box Model*/
     height: 100vh;
-    max-width: 480px;
+    width: 100vw;
 
     /*Otros*/
     font-family: 'Poppins', sans-serif;
@@ -38,7 +38,7 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    height: 100px;
+    height: 93px;
     width: 100vw;
     padding: 0 .9em;
     box-shadow: 0px 3px 5px 0px rgba(251,192,45,0.55);
@@ -69,6 +69,10 @@ header a:visited{
 
 header .header-links .header-links__slogan {
     /*Display & Box Model*/
+    display: none;
+}
+
+header nav {
     display: none;
 }
 
@@ -132,7 +136,65 @@ footer {
 
 /*TABLETS*/
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 590px) {
+
+    /* =====================================================
+                            HEADER
+    ===================================================== */
+
+    header {
+        /*Display & Box Model*/
+        padding: 0 1.2em 0 1.6em;
+        box-shadow: none;
+        background-color: #ffffff;
+    }
+
+    header .header-links .header-links__slogan {
+        /*Display & Box Model*/
+        display: none;
+    }
+
+    .menu-icon {
+        /*Display & Box Model*/
+        display: none;
+    }
+
+    header .header-buttons {
+        /*Display & Box Model*/
+        display: flex; 
+        padding-top: 1.5em;    
+    }
+
+    header .header-buttons a {
+        /*Display & Box Model*/
+        padding: .8em 1.4em;
+        border-radius: 7px;
+        border: none;
+
+        /*Otros*/
+        background-color: var(--second-color);
+        color: #ffffff;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+
+    header .header-buttons .header-button__signup {
+        /*Display & Box Model*/
+        margin-right: .6em;
+    }
+
+    header nav .header-buttons li {
+        list-style: none;
+    }
+
+    header nav {
+        display: block;
+    }
+
+}
+
+
+@media (min-width: 591px) {
 
     /* =====================================================
                             HEADER
@@ -156,7 +218,7 @@ footer {
 
     header .header-buttons {
         /*Display & Box Model*/
-        display: block;  
+        display: flex;  
         padding-top: 1.4em;    
     }
 
@@ -176,6 +238,14 @@ footer {
     header .header-buttons .header-button__signup {
         /*Display & Box Model*/
         margin-right: 1.1em;
+    }
+
+    header nav .header-buttons li {
+        list-style: none;
+    }
+
+    header nav {
+        display: block;
     }
 
     
@@ -206,7 +276,7 @@ footer {
 
 /*DESKTOP*/
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
 
     /* =====================================================
                             HEADER
@@ -232,7 +302,7 @@ footer {
     header .header-links .header-links__slogan {
         /*Display & Box Model*/
         display: block;
-        padding-top: 1.3em;
+        padding-top: 1.7em;
 
         /*Otros*/
         font-style: italic;
@@ -246,7 +316,7 @@ footer {
 
     header .header-buttons {
         /*Display & Box Model*/
-        display: block;      
+        display: flex;      
     }
 
     header .header-buttons a {
@@ -265,6 +335,14 @@ footer {
     header .header-buttons .header-button__signup {
         /*Display & Box Model*/
         margin-right: .6em;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    header nav .header-buttons li {
+        list-style: none;
     }
 
 
@@ -291,6 +369,10 @@ footer {
 
 }
 
+/* .header-down {
+    background-color: var(--second-color);
+    transition: 1s;
+} */
 
 /*elementos a cambiar/definir:
 lema de la empresa
