@@ -38,14 +38,14 @@
     margin-top: .5em;
 
     /*Otros*/
-    background-image: url(../../assets/img/icon-calendar.png);
+    background-image: url(../../assets/img/icon-calendar.svg);
     background-repeat: no-repeat;
     background-position: 2% center;
 }
 
 .main-box form .form-input__map {
     /*Otros*/
-    background-image: url(../../assets/img/icon-map-marker.png);
+    background-image: url(../../assets/img/icon-map-marker.svg);
     background-repeat: no-repeat;
     background-position: 2.5% center;
 }
