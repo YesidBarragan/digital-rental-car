@@ -25,10 +25,10 @@ export const Header = () => {
             <nav>
                 <ul className="header-buttons">
                     <li>
-                       <Link to="/register" className="header-button__signup">Crear cuenta</Link> 
+                        <Link to="/register" className="header-button__signup">Crear cuenta</Link> 
                     </li>
                     <li>
-                       <Link to="/login" className="header-button__login">Iniciar sesión</Link> 
+                        <Link to="/login" className="header-button__login">Iniciar sesión</Link> 
                     </li>
                 </ul>
             </nav>
@@ -36,5 +36,3 @@ export const Header = () => {
     )
 
 }
-
-export default Header;
