@@ -35,7 +35,7 @@ export const RegisterForm = () => {
     
     console.log(enteredPassword.length)
     if (enteredPassword.length < 6) {
-      setErrorMessageMinPassword("La contraseña debe tener como minimo 6 caracteres");
+      setErrorMessageMinPassword("La contraseña debe tener como mínimo 6 caracteres");
     } else {
       flagPasswordLength = true;
       setErrorMessageMinPassword("");
@@ -46,7 +46,7 @@ export const RegisterForm = () => {
       setErrorMessagePassword("");
       console.log(userData);
     } else {
-      setErrorMessagePassword("*Las contraseñas no coinciden");
+      setErrorMessagePassword("Las contraseñas no coinciden");
     }
     
     if (flagPassword && flagPasswordLength) {
@@ -71,13 +71,13 @@ export const RegisterForm = () => {
         <label className="register-email-label" htmlFor="register-email">Correo electrónico</label>
         <input id="register-email" type="email" required ref={emailInputRef}/>
         <label className="register-password-label" htmlFor="register-password">Contraseña
-        {errorMessageMinPassword && (<small className="error-register"> {errorMessageMinPassword}</small>)}
         </label>
+        {errorMessageMinPassword && (<small className="error-register"> {errorMessageMinPassword}</small>)}
         <input id="register-password" type="password" ref={passwordInputRef}/>
         <label className="register-repassword-label" htmlFor="register-repassword">Confirmar contraseña 
-        {errorMessagePassword && (<small className="error-register"> {errorMessagePassword}</small>)}
         </label>
-        <input id="register-repassword" type="password" ref={rePasswordInputRef}/>
+        {errorMessagePassword && (<small className="error-register"> {errorMessagePassword}</small>)}
+        <input id="register-repassword" type="password" required ref={rePasswordInputRef}/>
         <button className="register-button" type="submit">Crear cuenta</button>
       </form>
       <p className="login-anchor">¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link></p>
