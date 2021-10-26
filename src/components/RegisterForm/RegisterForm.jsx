@@ -1,8 +1,11 @@
-import { React, useRef } from "react";
-import { Link } from "react-router-dom";
+import { React, useRef, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./RegisterForm.css";
 
 export const RegisterForm = () => {
+
+  const history = useHistory();
+  const [errorMessagePassword, setErrorMessagePassword] = useState("");
 
   const nameInputRef = useRef();
   const lastNameInputRef = useRef();
@@ -27,9 +30,10 @@ export const RegisterForm = () => {
     }
 
     if (enteredPassword === enteredRePassword) {
+      history.push("/login");
       console.log(userData);
     }else {
-      window.alert("Las contraseñas no coinciden")
+      setErrorMessagePassword("*Las contraseñas no coinciden");
     }
   }
 
@@ -50,9 +54,11 @@ export const RegisterForm = () => {
         <label className="register-email-label" htmlFor="register-email">Correo electrónico</label>
         <input id="register-email" type="email" required ref={emailInputRef}/>
         <label className="register-password-label" htmlFor="register-password">Contraseña</label>
-        <input id="register-password" type="password" required ref={passwordInputRef}/>
-        <label className="register-repassword-label" htmlFor="register-repassword">Confirmar contraseña</label>
-        <input id="register-repassword" type="password" required ref={rePasswordInputRef}/>
+        <input id="register-password" type="password" required minLength="6" ref={passwordInputRef}/>
+        <label className="register-repassword-label" htmlFor="register-repassword">Confirmar contraseña 
+        {errorMessagePassword && (<small className="error-register"> {errorMessagePassword}</small>)}
+        </label>
+        <input id="register-repassword" type="password" required minLength="6" ref={rePasswordInputRef}/>
         <button className="register-button" type="submit">Crear cuenta</button>
       </form>
       <p className="login-anchor">¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link></p>
