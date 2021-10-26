@@ -5,6 +5,7 @@ import "./RegisterForm.css";
 export const RegisterForm = () => {
 
   const history = useHistory();
+  const [errorMessageMinPassword, setErrorMessageMinPassword] = useState("");
   const [errorMessagePassword, setErrorMessagePassword] = useState("");
 
   const nameInputRef = useRef();
@@ -15,13 +16,13 @@ export const RegisterForm = () => {
 
   function submitHandler(event) {
     event.preventDefault();
-
+    
     const enteredName = nameInputRef.current.value;
     const enteredLastName = lastNameInputRef.current.value;
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
     const enteredRePassword = rePasswordInputRef.current.value;
-
+    
     const userData = {
       name: enteredName,
       lastName: enteredLastName,
@@ -29,11 +30,27 @@ export const RegisterForm = () => {
       password: enteredPassword
     }
 
+    let flagPasswordLength = false;
+    let flagPassword = false;
+    
+    console.log(enteredPassword.length)
+    if (enteredPassword.length < 6) {
+      setErrorMessageMinPassword("La contraseña debe tener como minimo 6 caracteres");
+    } else {
+      flagPasswordLength = true;
+      setErrorMessageMinPassword("");
+    }
+
     if (enteredPassword === enteredRePassword) {
-      history.push("/login");
+      flagPassword = true;
+      setErrorMessagePassword("");
       console.log(userData);
-    }else {
+    } else {
       setErrorMessagePassword("*Las contraseñas no coinciden");
+    }
+    
+    if (flagPassword && flagPasswordLength) {
+      history.push("/login");
     }
   }
 
@@ -53,12 +70,14 @@ export const RegisterForm = () => {
         </div>
         <label className="register-email-label" htmlFor="register-email">Correo electrónico</label>
         <input id="register-email" type="email" required ref={emailInputRef}/>
-        <label className="register-password-label" htmlFor="register-password">Contraseña</label>
-        <input id="register-password" type="password" required minLength="6" ref={passwordInputRef}/>
+        <label className="register-password-label" htmlFor="register-password">Contraseña
+        {errorMessageMinPassword && (<small className="error-register"> {errorMessageMinPassword}</small>)}
+        </label>
+        <input id="register-password" type="password" ref={passwordInputRef}/>
         <label className="register-repassword-label" htmlFor="register-repassword">Confirmar contraseña 
         {errorMessagePassword && (<small className="error-register"> {errorMessagePassword}</small>)}
         </label>
-        <input id="register-repassword" type="password" required minLength="6" ref={rePasswordInputRef}/>
+        <input id="register-repassword" type="password" ref={rePasswordInputRef}/>
         <button className="register-button" type="submit">Crear cuenta</button>
       </form>
       <p className="login-anchor">¿Ya tienes una cuenta? <Link to="/login">Iniciar sesión</Link></p>
