@@ -111,6 +111,7 @@ footer {
     height: 58px;
     width: 100vw;
     padding-left: 1.4em;
+    z-index: -1;
 
     /*Otros*/
     background-color: var(--second-color);

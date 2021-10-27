@@ -26,10 +26,9 @@ export const RegisterForm = () => {
     const userData = {
       name: enteredName,
       lastName: enteredLastName,
-      email: enteredEmail,
-      password: enteredPassword
+      email: enteredEmail
     }
-
+    
     let flagPasswordLength = false;
     let flagPassword = false;
     
@@ -40,20 +39,21 @@ export const RegisterForm = () => {
       flagPasswordLength = true;
       setErrorMessageMinPassword("");
     }
-
+    
     if (enteredPassword === enteredRePassword) {
       flagPassword = true;
       setErrorMessagePassword("");
-      console.log(userData);
     } else {
       setErrorMessagePassword("Las contraseñas no coinciden");
     }
     
     if (flagPassword && flagPasswordLength) {
+      localStorage.setItem("userData", JSON.stringify(userData));
       history.push("/login");
     }
+    
   }
-
+  
   return (
     <section className="register">
       <h1>Crear Cuenta</h1>

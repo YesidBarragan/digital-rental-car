@@ -22,6 +22,7 @@ export const LoginForm = () => {
     const enteredLoginPassword = loginPasswordInputRef.current.value;
 
     if (enteredLoginEmail === userLoginData.userEmail && enteredLoginPassword === userLoginData.userPassword) {
+      localStorage.setItem("userAuth", true);
       history.push("/");
     }else {
       setErrorMessage("Por favor, vuelva a intentarlo sus credenciales son inválidas");
