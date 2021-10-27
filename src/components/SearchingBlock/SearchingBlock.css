@@ -4,8 +4,9 @@
 
 .main-box {
     /*Display & Box Model*/
-    margin-top: 100px;
+    margin-top: 93px;
     height: 260px;
+    width: 100%; /* revisar */
 
     /*Otros*/
     background-color: var(--background-color);
