@@ -1,0 +1,84 @@
+/* sidebar Nav */
+
+nav.nav-bar {
+  position: relative;
+  display: inline;
+}
+
+img.menu-icon {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menu-nav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: #ffffff;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+}
+
+.menu-nav.show-menu {
+  width: 100%;
+}
+
+div.menu-nav-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: var(--second-color);
+  height: 25%;
+  width: 100%;
+}
+
+div.menu-nav-box p {
+  color: #ffffff;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu-nav-link {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-align: end;
+  font-weight: bold;
+}
+
+.menu-nav-link.register {
+  padding-top: 20px;
+}
+
+@media (min-width: 480px) and (max-width: 590px) {
+
+  nav.nav-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 591px) {
+
+  nav.nav-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  nav.nav-bar {
+    display: none;
+  }
+}

@@ -1,0 +1,71 @@
+.div {
+    background: #FFFFFF;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
+    color: white;
+    overflow-y: scroll;
+  }
+  
+  .div li {
+  margin: 100px;
+  padding: 50px;
+  }
+  
+  .div h1 {
+  /* B- Heading 1 */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  
+  /* B - DB COLOR 2 */
+  color: #383B58;
+  }
+  
+  .div h2 {
+  /* B- Heading 1 */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 18px;
+  
+  /* B - DB COLOR 2 */
+  color: rgb(57, 64, 122);
+  }
+  
+  .div p{
+    /* B- Heading 1 */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 18px;
+  
+  /* B - DB COLOR 2 */
+  color: rgb(57, 64, 122);
+  }
+  
+  .div ul {
+    /* display: flex;
+    list-style-type: none; */
+    align-items: baseline;
+  }
+  
+  .div ul li {
+    margin: 1rem;
+  }
+  
+  .div a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(136, 80, 80);
+  }
+  
+  .div a:hover,
+  .div a:active,
+  .div a.active {
+    color: purple;
+  }
