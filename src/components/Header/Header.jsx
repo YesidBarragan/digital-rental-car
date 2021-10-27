@@ -23,6 +23,8 @@ export const Header = () => {
         setNavBarOpen(false);
     }
 
+    const userData = JSON.parse(localStorage.getItem("userData"));
+
     return (
         <header>
             <div className="header-links">
@@ -37,6 +39,7 @@ export const Header = () => {
             <nav className="nav-bar">
                 <ul className={`menu-nav ${navBarOpen ? " show-menu" : ""}`}>
                     <div className="menu-nav-box">
+                        {localStorage.getItem("userAuth") && (<p>{userData.name} {userData.lastName}</p>)}
                         <p>Menú</p>
                     </div>
                     <li>
@@ -44,6 +47,9 @@ export const Header = () => {
                     </li>
                     <li>
                         <Link to="/login" className="menu-nav-link login" onClick={closeMenu}>Iniciar sesión</Link> 
+                    </li>
+                    <li>
+                        <Link to="/" className="menu-nav-link login" onClick={localStorage.removeItem("userAuth")}>¿Deseas cerrar sesión?</Link> 
                     </li>
                 </ul>
             </nav>
