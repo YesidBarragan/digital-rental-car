@@ -7,6 +7,7 @@ import { ListBlock } from "../components/ListBlock/ListBlock";
 
 let autoRentType = [
   {
+    id: "1",
     descripcion: "Autos De Lujo",
     imgUrl:
       "https://i1.wp.com/thehappening.com/wp-content/uploads/2020/02/bmw-i8.jpg?fit=1480%2C901&ssl=1",
@@ -14,6 +15,7 @@ let autoRentType = [
   },
 
   {
+    id: "2",
     descripcion: "Autos Deportivos",
     imgUrl:
       "https://static.iris.net.co/soho/upload/images/2017/5/10/48000_1.jpg",
@@ -21,6 +23,7 @@ let autoRentType = [
   },
 
   {
+    id: "3",
     descripcion: "Autos Económicos",
     imgUrl:
       "https://www.elcarrocolombiano.com/wp-content/uploads/2019/04/20190430-LOS-CARROS-NUEVOS-MAS-BARATOS-DE-COLOMBIA-EN-2019-04.jpg",

@@ -8,7 +8,7 @@ export const ListBlock = () => {
       <h2>Recomendaciones</h2>
       <div className="card-car-list">
         { carsData.map(carData => (
-        <div className="card-car">
+        <div key={carData.id} className="card-car">
           <div className="card-image-container">
             <img className="image-list" src={carData.img} alt={carData.description} />
           </div>
