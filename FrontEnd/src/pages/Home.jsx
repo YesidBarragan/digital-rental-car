@@ -3,6 +3,7 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import SearchingBlock from "../components/SearchingBlock/SearchingBlock";
 import RentCategories from "../components/RentCategories/RentCategories";
+import { ListBlock } from "../components/ListBlock/ListBlock";
 
 let autoRentType = [
   {
@@ -34,6 +35,7 @@ export const Home = () => {
       <main>
         <SearchingBlock/>
         <RentCategories typesOfRent={autoRentType}/>
+        <ListBlock/>
       </main>
       <Footer/>
     </>

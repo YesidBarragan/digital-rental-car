@@ -32,7 +32,6 @@ export const RegisterForm = () => {
     let flagPasswordLength = false;
     let flagPassword = false;
     
-    console.log(enteredPassword.length)
     if (enteredPassword.length < 6) {
       setErrorMessageMinPassword("La contraseña debe tener como mínimo 6 caracteres");
     } else {
