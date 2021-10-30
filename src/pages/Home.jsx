@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
-import SearchingBlock from "../components/SearchingBlock/SearchingBlock";
+import { SearchingBlock } from "../components/SearchingBlock/SearchingBlock";
 import RentCategories from "../components/RentCategories/RentCategories";
 import { ListBlock } from "../components/ListBlock/ListBlock";
 
