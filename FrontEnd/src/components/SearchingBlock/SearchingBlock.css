@@ -37,6 +37,7 @@
 .main-box form .form-input__check {
     /*Display & Box Model*/
     margin-top: .5em;
+    width: 100%;
 
     /*Otros*/
     background-image: url(../../assets/img/icon-calendar.svg);
@@ -51,7 +52,7 @@
     background-position: 2.5% center;
 }
 
-.main-box form button {
+.main-box form button.search-button {
     /*Display & Box Model*/
     width: 95%;
     border-radius: 6px;
@@ -65,6 +66,38 @@
     font-weight: bold;
 }
 
+div.search-city {
+    width: 95%;
+    height: 200px;
+    background: #ffffff;
+    position: absolute;
+    top: 265px;
+    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.react-datepicker {
+    left: 35%;
+    top: -4px;
+}
+
+.react-datepicker-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.react-datepicker__input-container {
+    width: 95%;
+}
+
+.react-datepicker__triangle {
+    display: none;
+}
 
 /* ==============================
    ==============================
@@ -95,7 +128,7 @@
         padding-left: 2em;
     }
 
-    .main-box form button {
+    .main-box form button.search-button {
         /*Display & Box Model*/
         width: 25%;
         height: 35px;
@@ -135,7 +168,7 @@
         padding-left: 2em;
     }
 
-    .main-box form button {
+    .main-box form button.search-button {
         /*Display & Box Model*/
         width: 25%;
         height: 35px;
@@ -151,6 +184,24 @@
         padding-left: 2.2em;
     }
 
+    .react-datepicker-wrapper {
+        width: 36%;
+    }
+
+    .react-datepicker__input-container {
+        width: 90%;
+    }
+
+    .react-datepicker {
+        left: 16px;
+        top: -5;
+    }
+
+    div.search-city {
+        width: 32%;
+        top: 230px;
+        left: 21px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -160,20 +211,43 @@
         width: 27%;
     }
 
-    .main-box form button {
+    .main-box form button.search-button {
         /*Display & Box Model*/
         width: 15%;
         height: 35px;
+        cursor: pointer;
     }
 
     .main-box form .form-input__map {
         /*Display & Box Model*/
         padding-left: 2.3em;
+        cursor: pointer;
     }
 
     .main-box form .form-input__check {
         /*Display & Box Model*/
         padding-left: 2.6em;
+        cursor: pointer;
     }
 
+    .react-datepicker-wrapper {
+        width: 30%;
+    }
+
+    .react-datepicker__input-container {
+        width: 90%;
+    }
+
+    .react-datepicker {
+        left: 50%;
+    }
+
+    
+
+    div.search-city {
+        width: 27%;
+        top: 230px;
+        left: 266px;
+        cursor: pointer;
+    }
 }
