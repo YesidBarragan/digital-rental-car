@@ -18,7 +18,7 @@ let autoRentType = [
     id: "2",
     descripcion: "Autos Deportivos",
     imgUrl:
-      "https://static.iris.net.co/soho/upload/images/2017/5/10/48000_1.jpg",
+      "https://resizer.iproimg.com/unsafe/1200x/https://assets.iprofesional.com/assets/jpg/2020/03/492392.jpg",
     cantidad: "4700 autos"
   },
 
@@ -28,6 +28,14 @@ let autoRentType = [
     imgUrl:
       "https://www.elcarrocolombiano.com/wp-content/uploads/2019/04/20190430-LOS-CARROS-NUEVOS-MAS-BARATOS-DE-COLOMBIA-EN-2019-04.jpg",
     cantidad: "8100 autos"
+  },
+
+  {
+    id: "4",
+    descripcion: "Autos Familiares",
+    imgUrl:
+      "https://ilp.com.do/wp-content/uploads/2017/03/carro-familiar.jpg",
+    cantidad: "1500 autos"
   }
 ];
 
@@ -35,11 +43,11 @@ export const Home = () => {
   return (
     <>
       <Header/>
-      <main>
-        <SearchingBlock/>
-        <RentCategories typesOfRent={autoRentType}/>
-        <ListBlock/>
-      </main>
+        <main>
+          <SearchingBlock/>
+          <RentCategories typesOfRent={autoRentType}/>
+          <ListBlock/>
+        </main>
       <Footer/>
     </>
   )

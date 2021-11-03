@@ -81,7 +81,7 @@ div.search-city {
 }
 
 .react-datepicker {
-    left: 35%;
+    left: 2%;
     top: -4px;
 }
 
@@ -119,6 +119,7 @@ div.search-city {
         display: flex;
         align-items: flex-end;
         flex-direction: row;
+        padding: 0 1em;
     }
     
     .main-box form input {
@@ -142,6 +143,23 @@ div.search-city {
     .main-box form .form-input__check {
         /*Display & Box Model*/
         padding-left: 2.1em;
+    }
+
+    .react-datepicker {
+        width: 100%;
+    }
+
+    .react-datepicker__month-container {
+        width: 48%;
+    }
+
+    .react-datepicker__input-container {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .react-datepicker-wrapper {
+        width: 40%;
     }
 
 }
@@ -189,11 +207,12 @@ div.search-city {
     }
 
     .react-datepicker__input-container {
-        width: 90%;
+        width: 100%;
+        margin-right: 10px;
     }
 
     .react-datepicker {
-        left: 16px;
+        left: -20%;
         top: -5;
     }
 
@@ -203,6 +222,9 @@ div.search-city {
         left: 21px;
     }
 }
+
+
+/*DESKTOP*/
 
 @media (min-width: 1200px) {
 
@@ -220,13 +242,13 @@ div.search-city {
 
     .main-box form .form-input__map {
         /*Display & Box Model*/
-        padding-left: 2.3em;
+        padding-left: 2.6em;
         cursor: pointer;
     }
 
     .main-box form .form-input__check {
         /*Display & Box Model*/
-        padding-left: 2.6em;
+        padding-left: 2.9em;
         cursor: pointer;
     }
 
@@ -235,14 +257,13 @@ div.search-city {
     }
 
     .react-datepicker__input-container {
-        width: 90%;
+        width: 100%;
+        margin-right: 10px;
     }
 
     .react-datepicker {
-        left: 50%;
+        left: 0;
     }
-
-    
 
     div.search-city {
         width: 27%;

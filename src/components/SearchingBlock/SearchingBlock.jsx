@@ -26,7 +26,7 @@ export const SearchingBlock = () => {
         setSearchCityOpen(!searchCityOpen);
         cityInputRef.current.value = cityOptionRef.current.value;
     }
-
+    console.log(window.screen.width);
     return (
 
         <div className="main-box">
@@ -41,7 +41,7 @@ export const SearchingBlock = () => {
                         )) }
                 </div>) }
                 {/* <input className="form-input__check" type="text" placeholder="Check in - Check out"/> */}
-                <DatePicker 
+                {!(window.screen.width < 480) && (<DatePicker 
                     className="form-input__check date-picker"
                     placeholderText="Check in - Check out"
                     dateFormat="dd/MM/yyyy"
@@ -51,7 +51,19 @@ export const SearchingBlock = () => {
                     onChange={(update) => {
                         setDateRange(update);
                     }}
-                />
+                    monthsShown={2}
+                />)}
+                {(window.screen.width < 480) && (<DatePicker 
+                    className="form-input__check date-picker"
+                    placeholderText="Check in - Check out"
+                    dateFormat="dd/MM/yyyy"
+                    selectsRange={true}
+                    startDate={startDate}
+                    endDate={endDate}
+                    onChange={(update) => {
+                        setDateRange(update);
+                    }}
+                />) }
                 <button className="search-button">Buscar</button>
             </form>
         </div>
