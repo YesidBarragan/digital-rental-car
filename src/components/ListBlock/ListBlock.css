@@ -50,7 +50,7 @@ div.info-container {
 }
 
 @media only screen and (min-width: 1200px) {
-
+  /* For Desktop: */
   div.card-car-list {
     flex-direction: row;
     flex-wrap: wrap;
