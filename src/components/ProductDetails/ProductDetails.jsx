@@ -1,5 +1,7 @@
 import { React } from "react";
-import { ImageGallery } from 'react-image-gallery';
+import ImageGallery from 'react-image-gallery';
+import iconHomePath from "../../assets/img/icon-arrowHomePath.svg";
+import iconLocation from "../../assets/img/icon-location.svg";
 import numberPassenger from "../../assets/img/icon-number-passenger.svg";
 import numberBags from "../../assets/img/icon-number-bags.svg";
 import numberDoors from "../../assets/img/icon-number-doors.svg";
@@ -50,23 +52,18 @@ const carServices = [
 
 const images = [
     {
-        id: 1,
         original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        id: 2,
         original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        id: 3,
         original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        id: 4,
         original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        id: 5,
         original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     }
 ]
@@ -74,31 +71,34 @@ const images = [
 export const ProductDetails = () => {
     return (
         <section>
-            <div>
-                <div>
-                    <h3>Categoría</h3>
-                    <h2>Título del producto</h2> 
+            <div className="heading-section">
+                <div className="heading-section_texts">
+                    <h3 className="heading-section_category">Categoría</h3>
+                    <h2 className="heading-section_title">Título del producto</h2> 
                 </div>
-                <img />
+                <img className="heading-section__icon" src={iconHomePath} alt="Regresar al Home"/>
+            </div>
+            <div className="location-section">
+                <div className="location-section__left">
+                    <img className="location-section__left-icon" src={iconLocation} alt="Ícono de localización del producto"/>
+                    <p className="location-section__left-text">Lorem ipsum, dolor sitamet conse.</p>  
+                </div>
+                <small className="location-section__right">8</small> 
             </div>
             <div>
-               <p>Localización</p> 
-               <small>Calificación</small> 
+                <ImageGallery items={images} />
             </div>
             <div>
-                <ImageGallery items={images} />;
+                <h2 className="description-product__title">Título descripción</h2>
+                <p className="description-product__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maiores blanditiis, nobis mollitia, dolor quae pariatur sapiente est ullam accusantium nostrum porro, libero voluptatum debitis harum voluptatibus cupiditate cumque ipsum!</p>
             </div>
-            <div>
-                <h2>Título descripción</h2>
-                <p>Descripción producto</p>
-            </div>
-            <div>
-                <h2>¿Qué ofrece?</h2>
+            <div className="product-services__block">
+                <h2 className="product-services__title">¿Qué ofrece?</h2>
                 <div>
                     {carServices.map((carServices) => (
-                        <div key={carServices.id}>
-                            <img src={carServices.imageUrl} alt={carServices.description}/>
-                            <p>{carServices.description}</p>
+                        <div key={carServices.id} className="product-services__section">
+                            <img className="product-services__icon" src={carServices.imageUrl} alt={carServices.description}/>
+                            <p className="product-services__name">{carServices.description}</p>
                         </div>
                     ))}
                 </div>

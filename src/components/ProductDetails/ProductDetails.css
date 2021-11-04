@@ -1,1 +1,123 @@
-@import "~react-image-gallery/styles/css/image-gallery.css";
+/* =====================================================
+                        GENERAL
+   ===================================================== */
+
+.heading-section {
+    /*Display & Box Model*/
+    width: 100%;
+    display: flex;
+    padding-bottom: .1em;
+    box-shadow: -1px 6px 5px 0px rgba(96,125,139,0.46);
+-webkit-box-shadow: -1px 6px 5px 0px rgba(96,125,139,0.46);
+-moz-box-shadow: -1px 6px 5px 0px rgba(96,125,139,0.46);
+
+    /*Otros*/
+    background-color: #607d8b;
+}
+
+.heading-section_texts {
+    /*Display & Box Model*/
+    margin-top: 93px;
+    padding: .5em;
+
+    /*Otros*/
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.heading-section_category {
+    /*Otros*/
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading-section_title {
+    /*Otros*/
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.heading-section__icon {
+    /*Display & Box Model*/
+    display: block;
+}
+
+.location-section {
+    /*Display & Box Model*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.location-section__left {
+    /*Display & Box Model*/
+    display: flex;
+    padding: .8em .7em;
+    width: 50vw;
+}
+
+.location-section__left-icon {
+    /*Display & Box Model*/
+    width: 7%;
+    height: 7%;
+}
+
+.location-section__left-text {
+    /*Display & Box Model*/
+    padding-left: .5em;
+    /*Otros*/
+    color: var(--third-color);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.location-section__right {
+    /*Display & Box Model*/
+    padding: .2em .6em;
+    margin-right: .7em;
+    border-radius: 6px;
+    /*Otros*/
+    background-color: #607d8b;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.description-product__title, .product-services__title {
+    /*Display & Box Model*/
+    padding: .2em .6em;
+    /*Otros*/
+    color: var(--third-color);
+    font-size: 1.3rem;
+}
+
+.description-product__details {
+    /*Display & Box Model*/
+    padding: .2em .4em .9em;
+    /*Otros*/
+    color: #607d8b;
+}
+
+.product-services__title {
+    /*Display & Box Model*/
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: .7em;
+}
+
+.product-services__section {
+    /*Display & Box Model*/
+    display: flex;
+}
+
+.product-services__icon {
+    /*Display & Box Model*/
+    width: 5%;
+    height: 5%;
+}
+
+.product-services__name {
+    /*Otros*/
+    color: #607d8b;
+}
