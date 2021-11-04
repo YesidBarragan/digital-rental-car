@@ -7,6 +7,9 @@
     margin-top: 93px;
     height: 260px;
     width: 100%; /* revisar */
+    box-shadow: -1px 5px 5px 1px rgba(66, 77, 83, 0.64) inset;
+    -webkit-box-shadow: -1px 5px 5px 1px rgba(66, 77, 83, 0.64) inset;
+    -moz-box-shadow: -1px 5px 5px 1px rgba(66, 77, 83, 0.64) inset;
 
     /*Otros*/
     background-color: var(--background-color);
@@ -112,6 +115,7 @@ div.search-city {
     .main-box {
         /*Display & Box Model*/
         height: 200px;
+        box-shadow: none;
     }
 
     .main-box form {
@@ -170,6 +174,7 @@ div.search-city {
     .main-box {
         /*Display & Box Model*/
         height: 150px;
+        box-shadow: none;
     }
 
     .main-box form {
@@ -227,6 +232,11 @@ div.search-city {
 /*DESKTOP*/
 
 @media (min-width: 1200px) {
+
+    .main-box {
+        /*Display & Box Model*/
+        box-shadow: none;
+    }
 
     .main-box form input {
         /*Display & Box Model*/

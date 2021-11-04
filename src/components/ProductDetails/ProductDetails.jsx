@@ -1,4 +1,5 @@
 import { React } from "react";
+import { Link } from "react-router-dom";
 import ImageGallery from 'react-image-gallery';
 import iconHomePath from "../../assets/img/icon-arrowHomePath.svg";
 import iconLocation from "../../assets/img/icon-location.svg";
@@ -9,6 +10,8 @@ import electricCar from "../../assets/img/icon-electric-car.svg";
 import fuelCar from "../../assets/img/icon-fuel-car.svg";
 import manualCar from "../../assets/img/icon-manual-transmission.svg";
 import automaticCar from "../../assets/img/icon-gearbox.svg";
+import sharePhoto from "../../assets/img/icon-sharing.svg";
+import favorite from "../../assets/img/icon-favorite.svg";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "./ProductDetails.css";
 
@@ -76,7 +79,7 @@ export const ProductDetails = () => {
                     <h3 className="heading-section_category">Categoría</h3>
                     <h2 className="heading-section_title">Título del producto</h2> 
                 </div>
-                <img className="heading-section__icon" src={iconHomePath} alt="Regresar al Home"/>
+                <Link to="/"><img className="heading-section__icon" src={iconHomePath} alt="Regresar al Home"/></Link>
             </div>
             <div className="location-section">
                 <div className="location-section__left">
@@ -85,10 +88,21 @@ export const ProductDetails = () => {
                 </div>
                 <small className="location-section__right">8</small> 
             </div>
-            <div>
-                <ImageGallery items={images} />
+            <div className="gallery-block">
+                <img className="icons-photo-gallery gallery-icon1" src={sharePhoto} alt="Compartir foto"/>
+                <img className="icons-photo-gallery gallery-icon2" src={favorite} alt="Agregar foto a favoritos"/>
+                {(window.innerWidth < 1199) && (                    
+                    <ImageGallery 
+                        items={images} 
+                        showIndex={true}
+                        showNav={false}
+                        showFullscreenButton={false}
+                        showPlayButton={false}
+                        autoPlay={true}
+                    />
+                )}
             </div>
-            <div>
+            <div className="description-product">
                 <h2 className="description-product__title">Título descripción</h2>
                 <p className="description-product__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maiores blanditiis, nobis mollitia, dolor quae pariatur sapiente est ullam accusantium nostrum porro, libero voluptatum debitis harum voluptatibus cupiditate cumque ipsum!</p>
             </div>

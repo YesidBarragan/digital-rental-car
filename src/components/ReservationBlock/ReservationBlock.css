@@ -6,7 +6,6 @@ section.reservation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40%;
   background: #EBEBEE;
   padding-top: 20px;
   padding-bottom: 30px;
