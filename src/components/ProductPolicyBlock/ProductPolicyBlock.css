@@ -1,0 +1,31 @@
+section.policy-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+div.rules-container {
+    padding: 20px 0 0 20px;
+}
+
+div.rules-container p {
+    padding: 10px 0 0 10px;
+}
+
+div.security-container {
+    padding: 20px 0 0 20px;
+}
+
+div.security-container p {
+    padding: 10px 0 0 10px;
+}
+
+div.cancellation-container {
+    padding: 20px 0 0 20px;
+}
+
+div.cancellation-container p {
+    padding: 10px 0 0 10px;
+}
