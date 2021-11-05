@@ -1,6 +1,8 @@
 package com.dh.DigitalBooking.Service;
 
+import com.dh.DigitalBooking.DTO.CategoryDTO;
 import com.dh.DigitalBooking.DTO.ImageDTO;
+import com.dh.DigitalBooking.Model.Category;
 import com.dh.DigitalBooking.Model.Image;
 import com.dh.DigitalBooking.Repository.Implementation.IImageRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -75,5 +77,15 @@ public class ImageService implements IEntityService<ImageDTO>{
             logger.info("ID not found");
             System.out.println("City not found");
         }
+    }
+
+    public ImageDTO findImageByTitle(String title) {
+        logger.info("Searching image by name");
+        ImageDTO imgDTO = null;
+        Optional<Image> image = imageRepository.findImageByTitle(title);
+        if(image != null) {
+            imgDTO = mapper.convertValue(image, ImageDTO.class);
+        }
+        return imgDTO;
     }
 }

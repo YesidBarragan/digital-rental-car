@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface IImageRepository extends JpaRepository<Image, Long> {
 
-    @Query("SELECT img FROM Image img WHERE img.name = ?1")
-    Optional<Image> findImageByName(String name);
+    @Query("SELECT img FROM Image img WHERE img.title = ?1")
+    Optional<Image> findImageByTitle(String title);
 }

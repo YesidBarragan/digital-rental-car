@@ -1,6 +1,5 @@
 package com.dh.DigitalBooking.Model;
 
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

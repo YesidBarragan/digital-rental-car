@@ -1,6 +1,8 @@
 package com.dh.DigitalBooking.Service;
 
+import com.dh.DigitalBooking.DTO.CategoryDTO;
 import com.dh.DigitalBooking.DTO.CharacteristicDTO;
+import com.dh.DigitalBooking.Model.Category;
 import com.dh.DigitalBooking.Model.Characteristic;
 import com.dh.DigitalBooking.Repository.Implementation.ICharacteristicRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -74,6 +76,16 @@ public class CharacteristicService implements IEntityService<CharacteristicDTO>{
             logger.info("ID not found");
             System.out.println("Characteristic not found");
         }
+    }
+
+    public CharacteristicDTO findCharacteristicByName(String name){
+        logger.info("Searching characteristic by name");
+        CharacteristicDTO characteristicDTO = null;
+        Optional<Characteristic> charact = characteristicRepository.findCharacteristicByName(name);
+        if(charact != null) {
+            characteristicDTO = mapper.convertValue(charact, CharacteristicDTO.class);
+        }
+        return characteristicDTO;
     }
 
 }

@@ -60,7 +60,7 @@ public class City {
 
     public List<Product> getProducts() {
         return products;
-    }
+    }       //REVISAR SI VAN GETTERS Y SETTERS PARA PRODUCTOS
 
     public void setProducts(List<Product> products) {
         this.products = products;

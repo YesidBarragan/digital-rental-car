@@ -75,6 +75,17 @@ public class CityService implements IEntityService<CityDTO>{
             System.out.println("City not found");
         }
     }
+
+
+    public CityDTO findCityByName(String name){
+        logger.info("Searching city by name");
+        CityDTO cityDTO = null;
+        Optional<City> city = cityRepository.findCityByName(name);
+        if (city != null){
+            cityDTO = mapper.convertValue(city, CityDTO.class);
+        }
+        return cityDTO;
+    }
 }
 
 
