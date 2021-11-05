@@ -108,7 +108,7 @@ export const ProductDetails = () => {
             </div>
             <div className="product-services__block">
                 <h2 className="product-services__title">¿Qué ofrece?</h2>
-                <div>
+                <div className="product-services__container">
                     {carServices.map((carServices) => (
                         <div key={carServices.id} className="product-services__section">
                             <img className="product-services__icon" src={carServices.imageUrl} alt={carServices.description}/>
