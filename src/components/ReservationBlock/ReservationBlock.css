@@ -15,6 +15,8 @@ section.reservation-container h2 {
   margin-bottom: 20px;
   align-self: flex-start;
   margin-left: 10px;
+  font-size: 1.3rem;
+  color: var(--third-color);
 }
 
 div.calendar-reservation-container {
@@ -121,6 +123,7 @@ div.reservation {
 
 p.reservation-text {
   font-weight: bold;
+  color: var(--third-color);
 }
 
 button.reservation-button {
