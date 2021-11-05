@@ -10,7 +10,7 @@ import iconX from "../../assets/img/iconX.svg"
 import "../../general.css";
 import "./Header.css";
 
-export const Header = () => {
+export const Header = (props) => {
 
     /* window.addEventListener('scroll', function() {
         let header = document.querySelector('header');
@@ -58,10 +58,10 @@ export const Header = () => {
                         { !(JSON.parse(localStorage.getItem("userAuth"))) && (<p>Menú</p>) }
                     </div>
                     <li>
-                        { !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/register" className="menu-nav-link register" onClick={closeMenu}>Crear cuenta</Link>) }
+                        { !(props.register) && !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/register" className="menu-nav-link register" onClick={closeMenu}>Crear cuenta</Link>) }
                     </li>
                     <li>
-                        { !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/login" className="menu-nav-link login" onClick={closeMenu}>Iniciar sesión</Link>) }
+                        { !(props.login) && !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/login" className="menu-nav-link login" onClick={closeMenu}>Iniciar sesión</Link>) }
                     </li>
                     <li>
                         { JSON.parse(localStorage.getItem("userAuth")) && (<Link to="/" className="menu-nav-link close-session" onClick={closeSession}>¿Deseas cerrar sesión?</Link>) }
@@ -77,10 +77,10 @@ export const Header = () => {
             <nav>
                 <ul className="header-buttons">
                     <li>
-                        { !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/register" className="header-button__signup">Crear cuenta</Link>) }
+                        { !(props.register) && !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/register" className="header-button__signup">Crear cuenta</Link>) }
                     </li>
                     <li>
-                        { !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/login" className="header-button__login">Iniciar sesión</Link>) }
+                        { !(props.login) && !(JSON.parse(localStorage.getItem("userAuth"))) && (<Link to="/login" className="header-button__login">Iniciar sesión</Link>) }
                     </li>
                     { JSON.parse(localStorage.getItem("userAuth")) && (<div className="header-user-info">
                         <div className="header-user-logo">

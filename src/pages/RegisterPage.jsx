@@ -6,7 +6,10 @@ import { Footer } from "../components/Footer/Footer";
 export const RegisterPage = () => {
   return (
     <>
-      <Header/>
+      <Header
+        login = {false}
+        register = {true}
+      />
       <main>
         <RegisterForm/>
       </main>

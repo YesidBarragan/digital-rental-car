@@ -6,10 +6,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import es from 'date-fns/locale/es';
 import "./SearchingBlock.css";
 import carsData from "../../assets/data/cars.json"
+import { useWindowWidth } from "../../hooks/useWindowWidth/useWindowWidth";
 setDefaultLocale('es');
 registerLocale('es', es)
 
 export const SearchingBlock = () => {
+
+    const {width} = useWindowWidth();
 
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
@@ -41,7 +44,7 @@ export const SearchingBlock = () => {
                         )) }
                 </div>) }
                 {/* <input className="form-input__check" type="text" placeholder="Check in - Check out"/> */}
-                {!(window.screen.width < 480) && (<DatePicker 
+                {!(width < 480) && (<DatePicker 
                     className="form-input__check date-picker"
                     placeholderText="Check in - Check out"
                     dateFormat="dd/MM/yyyy"
@@ -53,7 +56,7 @@ export const SearchingBlock = () => {
                     }}
                     monthsShown={2}
                 />)}
-                {(window.screen.width < 480) && (<DatePicker 
+                {(width < 480) && (<DatePicker 
                     className="form-input__check date-picker"
                     placeholderText="Check in - Check out"
                     dateFormat="dd/MM/yyyy"
