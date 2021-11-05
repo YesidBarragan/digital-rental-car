@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { useWindowWidth } from "../../hooks/useWindowWidth/useWindowWidth";
 import { Link } from "react-router-dom";
 import ImageGallery from 'react-image-gallery';
@@ -56,25 +56,40 @@ const carServices = [
 
 const images = [
     {
-        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+		id: "uno",
+        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+		thumbnail: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+		id: "dos",
+        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+		thumbnail: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+		id: "tres",
+        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+		thumbnail: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+		id: "cuatro",
+        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+		thumbnail: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     },
     {
-        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+		id: "cinco",
+        original: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+		thumbnail: "https://images.unsplash.com/photo-1583427053896-00378e61e661?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
     }
 ]
 
 export const ProductDetails = () => {
 
     const { width } = useWindowWidth();
+	const [galleryOpen, setGalleryOpen] = useState(false);
+
+	const handleToggle = () => {
+		setGalleryOpen(!galleryOpen);
+	}
 
     return (
         <section>
@@ -93,8 +108,24 @@ export const ProductDetails = () => {
                 <small className="location-section__right">8</small> 
             </div>
             <div className="gallery-block">
-                <img className="icons-photo-gallery gallery-icon1" src={sharePhoto} alt="Compartir foto"/>
-                <img className="icons-photo-gallery gallery-icon2" src={favorite} alt="Agregar foto a favoritos"/>
+                { (width < 1199) && (<img className="icons-photo-gallery gallery-icon1" src={sharePhoto} alt="Compartir foto"/>) }
+                { (width < 1199) && (<img className="icons-photo-gallery gallery-icon2" src={favorite} alt="Agregar foto a favoritos"/>) }
+				{ (width > 1199) && 
+				(<div className="icons-photo-gallery-desktop">
+					<img className="gallery-icon1-desktop" src={sharePhoto} alt="Compartir foto"/>
+					<img className="gallery-icon2-desktop" src={favorite} alt="Agregar foto a favoritos"/>
+					{ (galleryOpen) && (
+							<ImageGallery 
+								items={images} 
+								showIndex={true}
+								showNav={true}
+								showFullscreenButton={true}
+								showPlayButton={false}
+								autoPlay={true}
+								additionalClass={"gallery-desktop"}
+						/>
+						)}
+				</div>)}
                 {(width < 1199) && (                    
                     <ImageGallery 
                         items={images} 
@@ -103,7 +134,16 @@ export const ProductDetails = () => {
                         showFullscreenButton={false}
                         showPlayButton={false}
                         autoPlay={true}
+						showThumbnails={false}
                     />
+                )}
+                { (width > 1199) && (
+                    <div className="gallery-block-desktop">
+                        {images.map((image) => (
+							<img src={image.original}  alt="images" className={`card-img ${image.id}`}/>
+						))}
+						<small onClick={handleToggle}>Ver más</small>
+                    </div>
                 )}
             </div>
             <div className="description-product">

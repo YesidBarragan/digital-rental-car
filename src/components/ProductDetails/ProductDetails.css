@@ -323,6 +323,70 @@
         width: 800px;
     }
 
+    div.gallery-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.icons-photo-gallery-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        height: 70px;
+        width: 93vw;
+    }
+
+    img.gallery-icon1-desktop {
+        filter: invert(44%) sepia(48%) saturate(223%) hue-rotate(155deg) brightness(96%) contrast(86%);
+        height: 1.5em;
+    }
+
+    img.gallery-icon2-desktop {
+        filter: invert(44%) sepia(48%) saturate(223%) hue-rotate(155deg) brightness(96%) contrast(86%);
+        height: 1.5em;
+    }
+
+    div.gallery-block-desktop {
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "area1 area2 area2"
+        "area1 area2 area2";
+        width: 93vw;
+    }
+
+    div.gallery-block-desktop small {
+        position: absolute;
+        color: white;
+        text-decoration: underline;
+        right: 5%;
+        bottom: 3%;
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    
+    .gallery-desktop {
+        position: relative;
+        width: 50%;
+        left: 20%;
+        top: 385%;
+    }
+
+    img.card-img {
+        height: auto;
+        border-radius: 10px;
+    }
+
+    img.card-img.uno {
+        grid-area: area1;
+    }
+
     .description-product {
         /*Display & Box Model*/
         padding: 2em 2.5em;
