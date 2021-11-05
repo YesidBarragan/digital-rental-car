@@ -1,4 +1,5 @@
 import { React } from "react";
+import { useWindowWidth } from "../../hooks/useWindowWidth/useWindowWidth";
 import { Link } from "react-router-dom";
 import ImageGallery from 'react-image-gallery';
 import iconHomePath from "../../assets/img/icon-arrowHomePath.svg";
@@ -72,6 +73,9 @@ const images = [
 ]
 
 export const ProductDetails = () => {
+
+    const { width } = useWindowWidth();
+
     return (
         <section>
             <div className="heading-section">
@@ -91,7 +95,7 @@ export const ProductDetails = () => {
             <div className="gallery-block">
                 <img className="icons-photo-gallery gallery-icon1" src={sharePhoto} alt="Compartir foto"/>
                 <img className="icons-photo-gallery gallery-icon2" src={favorite} alt="Agregar foto a favoritos"/>
-                {(window.innerWidth < 1199) && (                    
+                {(width < 1199) && (                    
                     <ImageGallery 
                         items={images} 
                         showIndex={true}
