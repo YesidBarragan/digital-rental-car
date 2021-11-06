@@ -1,6 +1,7 @@
-import { React, useState } from "react";
+import React, { useState } from 'react';
 import { useWindowWidth } from "../../hooks/useWindowWidth/useWindowWidth";
 import { Link } from "react-router-dom";
+import { Modal } from 'react-responsive-modal';
 import ImageGallery from 'react-image-gallery';
 import iconHomePath from "../../assets/img/icon-arrowHomePath.svg";
 import iconLocation from "../../assets/img/icon-location.svg";
@@ -85,11 +86,10 @@ const images = [
 export const ProductDetails = () => {
 
     const { width } = useWindowWidth();
-	const [galleryOpen, setGalleryOpen] = useState(false);
+	const [open, setOpen] = useState(false);
 
-	const handleToggle = () => {
-		setGalleryOpen(!galleryOpen);
-	}
+	const onOpenModal = () => setOpen(true);
+	const onCloseModal = () => setOpen(false);
 
     return (
         <section>
@@ -114,17 +114,17 @@ export const ProductDetails = () => {
 				(<div className="icons-photo-gallery-desktop">
 					<img className="gallery-icon1-desktop" src={sharePhoto} alt="Compartir foto"/>
 					<img className="gallery-icon2-desktop" src={favorite} alt="Agregar foto a favoritos"/>
-					{ (galleryOpen) && (
-							<ImageGallery 
-								items={images} 
-								showIndex={true}
-								showNav={true}
-								showFullscreenButton={true}
-								showPlayButton={false}
-								autoPlay={true}
-								additionalClass={"gallery-desktop"}
+					<Modal open={open} onClose={onCloseModal} center>
+						<ImageGallery 
+							items={images} 
+							showIndex={true}
+							showNav={true}
+							showFullscreenButton={false}
+							showPlayButton={false}
+							autoPlay={true}
+							additionalClass={"gallery-desktop"}
 						/>
-						)}
+					</Modal>
 				</div>)}
                 {(width < 1199) && (                    
                     <ImageGallery 
@@ -142,7 +142,7 @@ export const ProductDetails = () => {
                         {images.map((image) => (
 							<img src={image.original}  alt="images" className={`card-img ${image.id}`}/>
 						))}
-						<small onClick={handleToggle}>Ver más</small>
+						<small onClick={onOpenModal}>Ver más</small>
                     </div>
                 )}
             </div>

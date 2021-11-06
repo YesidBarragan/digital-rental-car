@@ -161,7 +161,7 @@
 .product-services__block {  /*cambiar*/
     padding-bottom: 1em;
 }
-   
+
 .product-services__title {
     /*Display & Box Model*/
     border-bottom: 2px solid var(--main-color);
@@ -370,12 +370,65 @@
         font-size: 1rem;
         cursor: pointer;
     }
-    
+
     .gallery-desktop {
-        position: relative;
-        width: 50%;
-        left: 20%;
-        top: 385%;
+        width: 70%;
+    }
+
+    .image-gallery-left-nav:hover, .image-gallery-right-nav:hover {
+        color: var(--main-color);
+    }
+
+    div.react-responsive-modal-overlay {
+        background: rgba(171, 146, 82, 0.5);
+        /* background: rgba(0, 0, 0, 0.5); */
+    }
+
+    .image-gallery-icon:focus {
+        outline: transparent;
+    }
+
+    div.image-gallery-index {
+        right: 2%;
+    }
+
+    div.image-gallery-slides {
+        border-radius: 10px;
+    }
+
+    div.image-gallery-swipe {
+        border-radius: 10px;
+    }
+
+    .image-gallery img {
+        border-radius: 10px;
+    }
+
+    .image-gallery-thumbnail-inner {
+        border-radius: 5px;
+    }
+
+    .image-gallery-thumbnail img {
+        border-radius: 5px;
+    }
+
+    .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus, .image-gallery-thumbnail:hover {
+        border-radius: 10px;
+        border: 5px solid var(--main-color);
+    }
+
+    div.react-responsive-modal-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.react-responsive-modal-modal {
+        display: flex;
+        justify-content: center;
+        max-width: none;
+        width: 70vw;
+        border-radius: 10px;
     }
 
     img.card-img {
