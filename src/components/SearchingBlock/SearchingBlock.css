@@ -67,6 +67,11 @@
     background-color: var(--main-color);
     color: #ffffff;
     font-weight: bold;
+    transition: .5s;
+}
+
+.main-box form button.search-button:hover {
+    background: #e9b527;
 }
 
 div.search-city {

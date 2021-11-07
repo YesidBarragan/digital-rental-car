@@ -4,12 +4,16 @@
   --link-color: #4285F4;
 }
 
+main {
+  min-height: calc(100vh - 0px - 58px);
+}
+
 section.login {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 3.5em;
+  padding-top: 8em;
 }
 
 section.login h1 {
@@ -60,6 +64,11 @@ button.login-button {
   background: var(--main-color);
   margin-top: 52px;
   cursor: pointer;
+  transition: .5s;
+}
+
+button.login-button:hover {
+  background: #e9b527;
 }
 
 section.login p.register-anchor {

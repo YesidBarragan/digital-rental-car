@@ -136,6 +136,11 @@ button.reservation-button {
   background: var(--main-color);
   margin-top: 20px;
   cursor: pointer;
+  transition: .5s;
+}
+
+button.reservation-button:hover {
+  background: #e9b527;
 }
 
 

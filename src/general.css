@@ -192,6 +192,18 @@ footer {
         display: block;
     }
 
+    .header-button__signup, .header-button__login {
+        transition: .5s;
+    }
+    
+    .header-button__signup:hover {
+        background: #e9b527;
+    }
+    
+    .header-button__login:hover {
+        background: #e9b527;
+    }
+
 }
 
 
@@ -247,6 +259,18 @@ footer {
 
     header nav {
         display: block;
+    }
+
+    .header-button__signup, .header-button__login {
+        transition: .5s;
+    }
+    
+    .header-button__signup:hover {
+        background: #e9b527;
+    }
+    
+    .header-button__login:hover {
+        background: #e9b527;
     }
 
     
@@ -344,6 +368,18 @@ footer {
 
     header nav .header-buttons li {
         list-style: none;
+    }
+
+    .header-button__signup, .header-button__login {
+        transition: .5s;
+    }
+    
+    .header-button__signup:hover {
+        background: #e9b527;
+    }
+    
+    .header-button__login:hover {
+        background: #e9b527;
     }
 
 
