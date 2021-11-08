@@ -8,13 +8,18 @@ function RentCategories(props) {
         <div className="main-container_rentCategories">
           {props.typesOfRent.map((typeOfRent) => (
             <div key={typeOfRent.id} className="card">
-              <div className="card-img-container">
+                <img  src={typeOfRent.imgUrl}  alt={typeOfRent.descripcion} className="card-img__categories"/>
+                <div className="text-container">
+                  <h3 className="category-name">{typeOfRent.descripcion}</h3>
+                  <p className="category-text">{typeOfRent.cantidad}</p>
+                </div>
+              {/* <div className="card-img-container">
                 <img  src={typeOfRent.imgUrl}  alt={typeOfRent.descripcion} className="card-img"/>
               </div>
               <div className="text-container">
                 <h3 className="category-name">{typeOfRent.descripcion}</h3>
                 <p>{typeOfRent.cantidad}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
