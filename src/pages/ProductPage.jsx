@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer/Footer";
 import { ProductDetails } from "../components/ProductDetails/ProductDetails";
 import { ReservationBlock } from "../components/ReservationBlock/ReservationBlock";
 import { ProductPolicyBlock } from "../components/ProductPolicyBlock/ProductPolicyBlock";
+import { MapBlock } from "../components/MapView/MapBlock";
 
 export const ProductPage = () => {
     return (
@@ -12,9 +13,8 @@ export const ProductPage = () => {
           <main>
             < ProductDetails />
             < ReservationBlock />
-
+            < MapBlock />
             < ProductPolicyBlock />  {/* ESTE ES EL PLOQUE CON INFORMACION DEBAJO DEL MAPA DE GOOGLE MAPS */}
-
           </main>
         <Footer/>
       </>
