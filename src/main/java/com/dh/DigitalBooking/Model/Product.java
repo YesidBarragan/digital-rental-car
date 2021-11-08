@@ -49,10 +49,13 @@ public class Product {
         this.description = description;
     }
 
-    public Product(String name, String description, List<Characteristic> characteristics) {
+    public Product(String name, String description, List<Characteristic> characteristics, List<Image> images, City city, Category category) {
         this.name = name;
         this.description = description;
         this.characteristics = characteristics;
+        this.images = images;
+        this.city = city;
+        this.category = category;
     }
 
     public Product() {
