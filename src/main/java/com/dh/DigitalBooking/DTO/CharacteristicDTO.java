@@ -8,6 +8,7 @@ import java.util.List;
 public class CharacteristicDTO {
 
     // ================= ATRIBUTOS ======================== //
+
     private Long id;
     private String name;
     private String icon;
@@ -55,5 +56,10 @@ public class CharacteristicDTO {
     }
 
     public CharacteristicDTO() {
+    }
+
+    public CharacteristicDTO(String name, String icon) {
+        this.name = name;
+        this.icon = icon;
     }
 }
