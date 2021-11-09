@@ -1,7 +1,6 @@
 import { React } from "react";
 import { Header } from "../components/Header/Header";
 import { RegisterForm } from "../components/RegisterForm/RegisterForm";
-import { Footer } from "../components/Footer/Footer";
 
 export const RegisterPage = () => {
   return (
@@ -13,7 +12,6 @@ export const RegisterPage = () => {
       <main>
         <RegisterForm/>
       </main>
-      <Footer/>
     </>
   )
 }
