@@ -7,23 +7,15 @@ import javax.persistence.*;
 public class Image {
     // ================= ATRIBUTOS ======================== //
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "image_sequence")
-    @SequenceGenerator(name= "image_sequence", sequenceName = "image_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_image")
     private long id;
     private String title;
     private String url;
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name="id_producto", nullable = false)
-    private Product product;
+
 
     // ================= CONSTRUCTOR ======================== //
 
-    public Image(String title, String url, Product product) {
-        this.title = title;
-        this.url = url;
-        this.product = product;
-    }
 
     public Image(String title, String url) {
         this.title = title;
@@ -54,11 +46,4 @@ public class Image {
         this.url = url;
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
 }

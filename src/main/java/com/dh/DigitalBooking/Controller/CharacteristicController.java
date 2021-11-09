@@ -86,22 +86,6 @@ public class CharacteristicController {
         }
 
     // ================= SOME TEST ========================//
-    @PostMapping("/test")  //EN LAS OTRAS CLASES DEL CONTROLER AQUÍ TAMBIÉN SE LLAMA TEST
-    public List<CharacteristicDTO> characteristicTest(){
-        CharacteristicDTO characteristicDTO1 = new CharacteristicDTO("renault sandero", "icon1");
-        CharacteristicDTO characteristicDTO2 = new CharacteristicDTO("nissan versa","icon2");
-        CharacteristicDTO characteristicDTO3 = new CharacteristicDTO("chevrolet sail", "icon3");
-        CharacteristicDTO characteristicDTO4 = new CharacteristicDTO("renault sandero","icon4");
 
-        // HE CREADO OBJETOS CON ATRIBUTOS IGUALES
-
-        ArrayList<CharacteristicDTO> characteristicDTOArrayList = new ArrayList<>();
-        characteristicDTOArrayList.add(characteristicService.save(characteristicDTO1));
-        characteristicDTOArrayList.add(characteristicService.save(characteristicDTO2));
-        characteristicDTOArrayList.add(characteristicService.save(characteristicDTO3));
-        characteristicDTOArrayList.add(characteristicService.save(characteristicDTO4));
-
-        return characteristicDTOArrayList;
-    }
 
 }

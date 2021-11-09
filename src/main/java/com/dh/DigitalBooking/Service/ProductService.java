@@ -6,12 +6,14 @@ import com.dh.DigitalBooking.Model.Product;
 import com.dh.DigitalBooking.Repository.Implementation.IProductRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+@Service
 public class ProductService implements IEntityService<ProductDTO>{
 
     // ================= ATRIBUTOS ========================//

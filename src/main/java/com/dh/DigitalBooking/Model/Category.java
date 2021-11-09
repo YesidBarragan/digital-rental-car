@@ -11,8 +11,7 @@ public class Category {
     // ================= ATRIBUTOS ========================//
 
     @Id
-    @SequenceGenerator(name = "category_sequence", sequenceName = "category_sequence")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_category")
     private Long id;
 
@@ -20,7 +19,7 @@ public class Category {
     private String description;
     private String imgUrl;
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "category", orphanRemoval = true)
     private List<Product> products = new ArrayList<>();
 
     // ================= CONSTRUCTOR ========================//

@@ -13,47 +13,43 @@ public class Product {
 
     // ================= ATRIBUTOS ======================== //
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_sequence")
-    @SequenceGenerator(name= "product_sequence", sequenceName = "product_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_product")
     private long id;
 
     private String name;
     private String description;
+    private String latitude;
+    private String longitude;
 
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "product_characteristc",
 
-            joinColumns = @JoinColumn(name = "id_product"),
-            inverseJoinColumns = @JoinColumn(name = "id_characteristc")
+            joinColumns = @JoinColumn(name = "id_product", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "id_characteristc", nullable = false)
     )
     private List<Characteristic> characteristics= new ArrayList<>();
 
-    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Image> images = new ArrayList<>();
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name="id_city", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="id_city", nullable =false)
     private City city;
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="id_category", nullable = false)
     private Category category;
 
     //===============CONSTRUCTOR ============================//
 
 
-    public Product(String name, String description) {
+    public Product(String name, String description, String latitude, String longitude, City city, Category category) {
         this.name = name;
         this.description = description;
-    }
-
-    public Product(String name, String description, List<Characteristic> characteristics, List<Image> images, City city, Category category) {
-        this.name = name;
-        this.description = description;
-        this.characteristics = characteristics;
-        this.images = images;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.city = city;
         this.category = category;
     }

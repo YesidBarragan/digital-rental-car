@@ -1,5 +1,8 @@
 package com.dh.DigitalBooking.DTO;
 
+import com.dh.DigitalBooking.Model.Product;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class CityDTO {
@@ -8,7 +11,7 @@ public class CityDTO {
     private Long id;
     private String name;
     private String country;
-    private List<ProductDTO> productDTOS;
+    private List<Product> products;
 
 
     // ================= CONSTRUCTOR ======================== //
@@ -18,10 +21,10 @@ public class CityDTO {
         this.country = country;
     }
 
-    public CityDTO(String name, String country, List<ProductDTO> productDTOS) {
+    public CityDTO(String name, String country, List<Product> products) {
         this.name = name;
         this.country = country;
-        this.productDTOS = productDTOS;
+        this.products = new ArrayList<>();
     }
 
     public CityDTO() {
@@ -48,5 +51,13 @@ public class CityDTO {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

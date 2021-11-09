@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/image")
 public class ImageController {
 
     // ================= ATRIBUTOS ========================//

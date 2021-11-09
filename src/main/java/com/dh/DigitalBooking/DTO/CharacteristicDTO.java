@@ -1,11 +1,17 @@
 package com.dh.DigitalBooking.DTO;
 
+import com.dh.DigitalBooking.Model.Product;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CharacteristicDTO {
 
     // ================= ATRIBUTOS ======================== //
     private Long id;
     private String name;
     private String icon;
+    private List<Product> products;
 
     // ================= GETTERS AND SETTERS ======================== //
 
@@ -14,9 +20,6 @@ public class CharacteristicDTO {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -34,12 +37,21 @@ public class CharacteristicDTO {
         this.icon = icon;
     }
 
-    // ================= CONSTRUCTOR ======================== //
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+// ================= CONSTRUCTOR ======================== //
 
 
-    public CharacteristicDTO(String name, String icon) {
+    public CharacteristicDTO(String name, String icon, List<Product> products) {
         this.name = name;
         this.icon = icon;
+        this.products = new ArrayList<>();
     }
 
     public CharacteristicDTO() {

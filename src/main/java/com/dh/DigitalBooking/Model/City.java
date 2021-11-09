@@ -9,14 +9,13 @@ import java.util.List;
 public class City {
     // ================= ATRIBUTOS ======================== //
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "city_sequence")
-    @SequenceGenerator(name= "city_sequence", sequenceName = "city_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_city")
     private long id;
     private String name;
     private String country;
 
-    @OneToMany(mappedBy = "city", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "city", orphanRemoval = true)
     private List<Product> products = new ArrayList<>();
 
     // ================= COSNTRUCTOR ======================== //
@@ -25,7 +24,7 @@ public class City {
     public City(String name, String country, List<Product> products) {
         this.name = name;
         this.country = country;
-        this.products = products;
+        this.products = new ArrayList<>();
     }
 
     public City(String name, String country) {

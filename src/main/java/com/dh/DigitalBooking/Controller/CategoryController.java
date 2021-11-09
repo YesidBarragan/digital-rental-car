@@ -91,20 +91,7 @@ public class CategoryController {
     }
 
     // ================= SOME TEST ========================//
-    @PostMapping("/test")
-    public List<CategoryDTO> categoryTest(){
-        CategoryDTO category1 = new CategoryDTO("LUJOSOS", "Carros lujosos y caros", "url1");
-        CategoryDTO category2 = new CategoryDTO("DEPORTIVOS", "Carros deportivos y bonitos", "url2");
-        CategoryDTO category3 = new CategoryDTO("ECONOMICOS", "Carros buenos, bonitos y baratos", "url3");
 
-        ArrayList<CategoryDTO> categories = new ArrayList<>();
-        categories.add(categoryService.save(category1));
-        categories.add(categoryService.save(category2));
-        categories.add(categoryService.save(category3));
-
-        return categories;
-
-    }
 
 
 

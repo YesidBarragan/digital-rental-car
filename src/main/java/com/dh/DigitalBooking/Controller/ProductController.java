@@ -1,7 +1,4 @@
 package com.dh.DigitalBooking.Controller;
-
-
-import com.dh.DigitalBooking.DTO.ImageDTO;
 import com.dh.DigitalBooking.DTO.ProductDTO;
 import com.dh.DigitalBooking.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +56,10 @@ public class ProductController {
         logger.info("product List");
         return productService.findAll();
     }
+
+
+
+
 
 
 

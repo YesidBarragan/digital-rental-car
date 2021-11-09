@@ -11,8 +11,7 @@ public class Characteristic {
 
     // ================= ATRIBUTOS ======================== //
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "characteristic_sequence")
-    @SequenceGenerator(name= "characteristic_sequence", sequenceName = "characteristic_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_characteristic")
     private long id;
     private String name;
@@ -25,7 +24,7 @@ public class Characteristic {
     public Characteristic(String name, String icon, List<Product> products) {
         this.name = name;
         this.icon = icon;
-        this.products = products;
+        this.products = new ArrayList<>();
     }
 
     public Characteristic(String name, String icon) {

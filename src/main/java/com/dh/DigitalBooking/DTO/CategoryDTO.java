@@ -1,6 +1,10 @@
 package com.dh.DigitalBooking.DTO;
 
+import com.dh.DigitalBooking.Model.Product;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CategoryDTO {
@@ -10,16 +14,18 @@ public class CategoryDTO {
     private String name;
     private String description;
     private String imgUrl;
+    private List<Product> products;
 
 
     // ================= CONSTRUCTOR ========================
 
     public CategoryDTO() { }
 
-    public CategoryDTO(String name, String description, String imgUrl) {
+    public CategoryDTO(String name, String description, String imgUrl, List<Product> products) {
         this.name = name;
         this.description = description;
         this.imgUrl = imgUrl;
+        this.products = new ArrayList<>();
     }
 
     // ================= GETTERS AND SETTERS ========================
